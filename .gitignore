@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos grandes
+Data/
+outputs/
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
