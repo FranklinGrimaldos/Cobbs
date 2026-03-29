@@ -81,20 +81,4 @@ def plot_caudales(df_zonas, pozo, filename=None):
     ax.grid(True, axis="x", linestyle="--", alpha=0.5)
     plt.tight_layout()
 
-    # 📅 Fecha automática
-    fecha = datetime.now().strftime("%Y%m%d")
-
-    # Ruta outputs
-    base_dir = Path(__file__).resolve().parents[1]
-    output_dir = base_dir / "outputs" / "figures"
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    if filename is None:
-        filename = f"resultados_cobbs_{pozo}_{fecha}.png"
-
-    output_path = output_dir / filename
-
-    plt.savefig(output_path, dpi=300)
-    plt.close()
-
-    print(f"💾 Gráfico guardado en: {output_path}")
+    return fig
